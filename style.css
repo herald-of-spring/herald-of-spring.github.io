@@ -1,0 +1,109 @@
+:root {
+    --background: #F1FAEE;
+    --blue-complement: #1D3557;
+    --red-complement: #E63946;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    all: unset;
+}
+
+.title-wrapper {
+    background-color: var(--red-complement);
+    position: absolute;
+    border: 8px solid var(--red-complement);
+    z-index: 1;
+}
+
+.title-wrapper:hover h1 {
+    color: var(--blue-complement);
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--background);
+    font-size: 230%;    /* 36.8px */
+    font-weight: 300;
+}
+
+.title-gradient {
+    position: absolute;
+    height: 52.8px;
+    width: 80px;
+    left: 220px;
+    z-index: 1;
+    background: var(--red-complement);
+    background: linear-gradient(90deg, var(--red-complement) 0%, var(--blue-complement) 75%);
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 52.8px;
+    background-color: var(--blue-complement);
+    box-shadow: 0 10px 10px #aaaaaa;
+}
+
+ul h2 {
+    color: var(--background);
+    font-size: 180%;    /* 28.8px */
+    font-weight: 250;
+    padding: 12px 20px;
+}
+
+ul li:hover h2 {
+    color: var(--red-complement);
+    cursor: pointer;
+}
+
+.hidden {
+    position: fixed;
+    top: 52.8px;
+    right: 0;
+    width: 20px;
+    z-index: -1;
+    transition: .75s ease-in-out 1s;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.project-wrapper {
+
+}
+
+.project-title {
+    position: relative;
+
+}
+
+.project-title::before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: -20px;
+    height: 20px;
+    width: 10px;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0 10px 0 0 var(--background);
+}
+
+.project-title::after {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: -10px;
+    height: 20px;
+    width: 10px;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0 10px 0 0 var(--background);
+}
