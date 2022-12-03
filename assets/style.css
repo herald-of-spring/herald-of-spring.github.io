@@ -1,0 +1,249 @@
+:root {
+    --background: #F1FAEE;
+    --blue-complement: #1D3557;
+    --red-complement: #E63946;
+    --blue-frame: #457B9D;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    all: unset;
+    transition: all .3s ease-in-out;
+}
+
+.title-wrapper {
+    background-color: var(--red-complement);
+    position: absolute;
+    border: 8px solid var(--red-complement);
+    z-index: 3;
+}
+
+    .title-wrapper:hover h1 {
+        color: var(--blue-complement);
+        cursor: pointer;
+    }
+
+h1 {
+    color: var(--background);
+    font-size: 230%;    /* 36.8px */
+}
+
+.title-gradient {
+    position: absolute;
+    height: 52.8px;
+    width: 80px;
+    left: 220px;
+    z-index: 3;
+    background: var(--red-complement);
+    background: linear-gradient(90deg, var(--red-complement) 0%, var(--blue-complement) 75%);
+}
+
+ul {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    height: 52.8px;
+    background-color: var(--blue-complement);
+    box-shadow: 0 10px 10px #aaaaaa;
+}
+
+    ul h2 {
+        color: var(--background);
+        font-size: 180%;    /* 28.8px */
+        padding: 12px 20px;
+    }
+
+    ul li:hover h2 {
+        color: var(--red-complement);
+        cursor: pointer;
+    }
+
+.hidden {
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    width: 60px;
+    z-index: 1;
+    transition: .5s ease-in-out 1s;
+}
+    .hidden:hover {
+        width: 440px;
+        transition: .25s ease-in-out 0s;
+    }
+
+body {
+    background-color: var(--background);
+    color: var(--blue-complement);
+}
+
+h3 {
+    font-size: 200%;
+    font-weight: 550;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 16px auto;
+}
+
+h4 {
+    font-size: 130%;    /* 20.8px */
+}
+
+.container {
+    padding: 36px auto;
+}
+
+/* .bg-main {
+    background-color: var(--blue-complement);
+} */
+
+.w-33 {
+    width: 33.33%;
+}
+
+.w-66 {
+    width: 66.66%;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.center-within {
+    display: flex;
+    justify-content: center;
+}
+
+.rounded {
+    border-radius: 36px;
+}
+
+.lead {
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+    font-size: 170%;
+}
+
+#projects {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.project-wrapper {
+    background-color: var(--blue-frame);
+    height: 200px;
+    width: 323.6px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.project-wrapper:hover .demo {
+    background-color: var(--blue-complement);
+}
+
+.project-wrapper:hover .project-title {
+    color: var(--blue-complement);
+}
+
+.demo {
+    background-color: var(--red-complement);
+    height: 184px;
+    width: 307.6px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    border-radius: 20px;
+}
+
+.project-title {
+    position: absolute;
+    color: var(--background);
+    bottom: 8px;
+    left: 8px;
+    background-color: var(--blue-frame);
+    opacity: 0.75;
+    border-radius: 0 12px 0 0;
+    padding: 4px 4px 0 0;
+}
+
+    .project-title::before {
+        background-color: transparent;
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: -10px;
+        left: 0;
+        height: 10px;
+        width: 20px;
+        border-radius: 0 0 0 10px;
+        box-shadow: -8px 0 0 0 var(--blue-frame);
+    }
+
+    .project-title::after {
+        background-color: transparent;
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        right: -10px;
+        height: 20px;
+        width: 10px;
+        border-radius: 0 0 0 10px;
+        box-shadow: 0 8px 0 0 var(--blue-frame);
+    }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

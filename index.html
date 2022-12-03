@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anh Nguyen's Portfolio</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://kit.fontawesome.com/d07fe58864.js" crossorigin="anonymous"></script>
 </head>
 
 <header>
@@ -17,27 +18,98 @@
         <li><h2><a href="#projects">Projects</a></h2></li>
         <li><h2><a href="#contacts">Contacts</a></h2></li>
     </ul>
-    <ul class="hidden">
-        <li><h2><</h2></li>
-        <li><h2><a href="#about">About</a></h2></li>
-        <li><h2><a href="#projects">Projects</a></h2></li>
-        <li><h2><a href="#contacts">Contacts</a></h2></li>
-    </ul>
+    <div class="hidden">
+        <ul>
+            <li><h2><a href="#about">About</a></h2></li>
+            <li><h2><a href="#projects">Projects</a></h2></li>
+            <li><h2><a href="#contacts">Contacts</a></h2></li>
+            <li><h2><</h2></li>
+        </ul>
+    </div>
 </header>
 
 <body>
-    <div id="about">
-
+    <i class="fa-brands fa-square-js"></i>
+    <div id="about" class="container w-66 bg-main">
+        <div class="center-within">
+            <div class="w-33 center-within">
+                <img class="rounded" src="./images/profile.jpg" alt="Picture of Me!" width="252px" height="336px">
+            </div>
+            <div class="w-66 rounded p-16">
+                <div class="lead">Hey there! I'm Andy, and I code.</div>
+                <p>
+                    I have not always been coding, though. Graduating from USC '22 with a BS in Biochemistry, I thought I would go on to pursue medical school. Little did I know, though, I would make <i>quite</i> the career change. Instead of dealing with patients, I now deal with programs.
+                </p>
+            </div>
+        </div>
     </div>
-    <div id="projects">
-        
+    <div id="projects" class="container">
+        <h3>Projects</h3>
+        <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Piano</h4>
+            </div>
+        </div>
+        <!-- <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Horiseon</h4>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Title</h4>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Title</h4>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Title</h4>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="demo"></div>
+            <div class="project-title">
+                <h4>Title</h4>
+            </div>
+        </div> -->
     </div>
 </body>
 
 <footer>
-    <div id="contacts">
+    <div id="contacts" class="container">
+        <h3>Contact Me</h3>
 
     </div>
 </footer>
+
+<section class="container">
+    <h2>Caption</h2>
+    <div class="text-container">
+      <div class="text-box reveal fade-bottom">
+        <h3>Section Text</h3>
+        <p>Random text</p>
+      </div>
+      <div class="text-box reveal fade-left">
+        <h3>Section Text</h3>
+        <p>Random text</p>
+      </div>
+      <div class="text-box reveal fade-right">
+        <h3>Section Text</h3>
+        <p>Random text</p>
+      </div>
+    </div>
+  </section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./assets/script.js"></script>
 
 </html>
